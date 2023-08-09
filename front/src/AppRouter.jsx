@@ -10,18 +10,21 @@ import Dogam from "./components/dogam/Dogam";
 import Signup from "./components/account/Signup";
 import Fishpic from "./components/fishing/Fishpic";
 import Board from "./components/board/Board";
-// import Getfish from "./components/fishing/Getfish";
+import Getfish from "./components/fishing/Getfish";
 import Background from "./components/common/Background";
 import Loading from "./components/common/Loading";
 import Infoapi from "./components/map/Infoapi";
 import Profile from "./components/user/Profile";
-import Firstpage from "./components/freshman/Firstpage";
 import SeaScene from "./components/fishbowl/SeaScene";
 import ImgTest from "./temp/Teacherable/ImgTest";
 import Map from "./components/map/Map";
 import Inventory from "./components/fishbowl/Inventory";
 // import Bowl from "./components/fishbowl/Bowl";
 import Balls from "./components/fishbowl/Balls";
+import Freshman from "./components/freshman/Freshman";
+import Kakao from "./components/account/Kakao";
+import Camera from "./components/camera/Camera";
+import Dict from "./components/dict/Dict";
 
 function AppRouter(props) {
   return (
@@ -46,7 +49,10 @@ function AppRouter(props) {
             <Route path="/" element={<Home />}></Route>
             <Route path="/fishing" element={<Fishing />}></Route>
             <Route path="/Fishpic" element={<Fishpic />}></Route>
-            {/* <Route path="/Getfish" element={<Getfish />}></Route> */}
+            <Route path="/Dict" element={<Dict />}></Route>
+            <Route path="/login/oauth2/code/kakao" element={<Kakao />}></Route>
+
+            <Route path="/Getfish" element={<Getfish />}></Route>
             <Route path="/Login" element={<Login />}></Route>
             <Route path="/Balls" element={<Balls />}></Route>
             <Route path="/Signup" element={<Signup />}></Route>
@@ -55,14 +61,15 @@ function AppRouter(props) {
             <Route path="/Infoapi" element={<Infoapi />}></Route>
             <Route path="/Inventory" element={<Inventory />}></Route>
             <Route path="/Loading" element={<Loading />}></Route>
-            <Route path="/Firstpage" element={<Firstpage />}></Route>
             <Route path="/SeaScene" element={<SeaScene />}></Route>
             <Route path="/Board" element={<Board />}></Route>
             {/* <Route path="/SeaScene" element={<SeaScene />}></Route> */}
             <Route path="/Profile/:userId" element={<Profile />}></Route>
+            <Route path="Camera" element={<Camera />}></Route>
             {/* <Route path="/FishBowl" element={<FishBowl />}></Route> */}
 
             <Route path="/Map" element={<Map />}></Route>
+            <Route path="/Freshman" element={<Freshman />}></Route>
             {/* <Route path="/Bowl" element={<Bowl />}></Route> */}
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
