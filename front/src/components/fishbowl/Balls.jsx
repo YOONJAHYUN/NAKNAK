@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { authorizedRequest } from "../account/AxiosInterceptor";
+import { each } from "jquery";
 
 export class ImageObject {
-  constructor(x, y, imageUrl) {
+  constructor(canvas, x, y, imageUrl) {
+    this.canvas = canvas;
     this.x = x;
     this.y = y;
     this.image = new Image();
@@ -14,6 +17,12 @@ export class ImageObject {
     this.isDragging = false;
     this.dragOffsetX = 0;
     this.dragOffsetY = 0;
+    // 캔버스 내부에 이미지가 나타나도록 x, y 좌표를 제한합니다.
+    this.x = Math.max(this.size / 2, Math.min(x, canvas.width - this.size / 2));
+    this.y = Math.max(
+      this.size / 2,
+      Math.min(y, canvas.height - this.size / 2)
+    );
   }
 
   onTouchStart(event) {
@@ -55,13 +64,26 @@ export class ImageObject {
   }
 
   draw(ctx) {
+    ctx.imageSmoothingEnabled = true; // 안티앨리어싱 비활성화
+    const rotation = Math.atan2(-this.weight, -this.directionX);
+    ctx.save();
+    ctx.translate(this.x, this.y);
+    ctx.rotate(rotation);
     ctx.drawImage(
       this.image,
-      this.x - this.size / 2,
-      this.y - this.size / 2,
+      -this.size / 2,
+      -this.size / 2,
       this.size,
       this.size
     );
+    ctx.restore();
+    // ctx.drawImage(
+    //   this.image,
+    //   this.x - this.size / 2,
+    //   this.y - this.size / 2,
+    //   this.size,
+    //   this.size
+    // );
   }
 }
 
@@ -151,24 +173,55 @@ image.src = "./assets/dom1.png";
 const ballSize = 50;
 
 const Balls = () => {
+  const [fishBowlData, setFishBowlData] = useState(undefined);
+
+  const getFishBowl = async () => {
+    try {
+      const response = await authorizedRequest({
+        method: "get",
+        url: "/api1/api/fishes/fishbowl/view",
+      });
+      setFishBowlData(response.data);
+      console.log(response);
+      onStart();
+    } catch (error) {
+      console.error("Error posting data:", error);
+    }
+  };
+
+  useEffect(() => {
+    getFishBowl();
+  }, []);
+
   const onStart = () => {
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
+    const imageUrls = [];
+    console.log(fishBowlData);
+    if (fishBowlData) {
+      fishBowlData.forEach((fish) => {
+        console.log(fish);
+        imageUrls.push(
+          `${process.env.REACT_APP_BACKEND_URL}/img/fishes/${fish.fishCode}.png`
+        );
+      });
+    }
     let images = []; // 배열 이름을 'images'로 변경
-    const imageUrls = [
-      "./assets/dom1.png",
-      "./assets/dom1.png",
-      "./assets/dom1.png",
-    ]; // 표시할 이미지 URL을 추가합니다.
+    // const imageUrls = [
+    //   "./assets/dom1.png",
+    //   "./assets/dom1.png",
+    //   "./assets/dom1.png",
+    // ]; // 표시할 이미지 URL을 추가합니다.
 
     const init = () => {
       for (let i = 0; i < imageUrls.length; i++) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        const image = new ImageObject(x, y, imageUrls[i]);
+        // const x = Math.random() * canvas.width;
+        const x = 100 + Math.random() * (canvas.width - 200);
+        // const y = Math.random() * canvas.height;
+        const y = 100 + Math.random() * (canvas.height - 200);
+        const image = new ImageObject(canvas, x, y, imageUrls[i]);
         image.touchstart = image.onTouchStart.bind(image);
         image.touchmove = image.onTouchMove.bind(image);
         image.touchend = image.onTouchEnd.bind(image);
@@ -180,9 +233,39 @@ const Balls = () => {
     };
 
     function animate() {
-      loadBackgroundImage("./assets/images/badabada.png", canvas, ctx);
-      ctx.fillStyle = "rgba(255,255,255,0.5)";
+      // // 캔버스를 하나 더 생성합니다.
+      // const offscreenCanvas = document.createElement("canvas");
+      // offscreenCanvas.width = canvas.width;
+      // offscreenCanvas.height = canvas.height;
+      // const offscreenCtx = offscreenCanvas.getContext("2d");
+
+      // // 배경과 이미지를 offscreen 캔버스에 그립니다.
+      // loadBackgroundImage(
+      //   "./assets/images/badabada.png",
+      //   offscreenCanvas,
+      //   offscreenCtx
+      // );
+      // for (let i = 0; i < images.length; i++) {
+      //   images[i].update(offscreenCanvas);
+      //   images[i].draw(offscreenCtx);
+      // }
+
+      // // offscreen 캔버스의 내용을 메인 캔버스에 복사합니다.
+      // ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // ctx.drawImage(offscreenCanvas, 0, 0);
+
+      // window.addEventListener("resize", function () {
+      //   canvas.width = window.innerWidth;
+      //   canvas.height = window.innerHeight;
+      // });
+      // requestAnimationFrame(animate);
+
+      // loadBackgroundImage("./assets/images/badabada.png", canvas, ctx);
+      // ctx.fillStyle = "rgba(255,255,255,0.5)";
       // ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+      loadBackgroundImage("./assets/images/badabada.png", canvas, ctx); // Redraw the background image
+      ctx.fillStyle = "rgba(255,255,255,0.5)";
       for (let i = 0; i < images.length; i++) {
         images[i].update(canvas);
         images[i].draw(ctx);
@@ -230,8 +313,10 @@ const Balls = () => {
   };
 
   useEffect(() => {
-    onStart();
-  }, []);
+    if (fishBowlData) {
+      onStart();
+    }
+  }, [fishBowlData]);
 
   return (
     <canvas
