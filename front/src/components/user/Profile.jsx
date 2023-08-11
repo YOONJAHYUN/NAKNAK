@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import * as S from "./profileStyle";
-
+import "./profile.css";
 // import axios from "axios";
 // import { useRecoilState } from "recoil";
 // import { loginuser, token } from "../../utils/atoms";
@@ -11,6 +11,7 @@ import Mypost from "./Mypost";
 import Profileinventory from "./Profileinventory";
 import { useParams } from "react-router-dom";
 import { authorizedRequest } from "../account/AxiosInterceptor";
+import ProfileModal from "./ProfileModal";
 
 function Profile(props) {
   const userId = useParams().userId;
@@ -21,6 +22,13 @@ function Profile(props) {
   const [profileData, setProfileData] = useState(null);
   const [loading, setLoading] = useState(true); // 추가: 데이터 로딩 상태
   const [activeView, setActiveView] = useState("myPosts");
+  const [modalOpen, setModalOpen] = useState(false);
+
+  // 모달창 노출
+  const showModal = () => {
+    setModalOpen(true);
+  };
+
   const handleToggle = (view) => {
     setActiveView(view);
   };
@@ -32,6 +40,7 @@ function Profile(props) {
         url: `/api1/api/members/${temp}`,
       });
       setProfileData(response.data);
+      console.log(response.data);
       setLoading(false); // 데이터 로딩 완료
     } catch (error) {
       console.error("Error posting data:", error);
@@ -80,15 +89,29 @@ function Profile(props) {
             </span>
             {profileData.memberResponse.nickname}
           </p>
-          {profileData.memberResponse.memberImage?.fileUrl && (
+          <div className="profileimgbox">
             <img
               className="profileImg"
-              src={profileData.memberResponse.memberImage.fileUrl}
+              src={
+                profileData.memberResponse.memberImage?.fileUrl
+                  ? `${process.env.REACT_APP_BACKEND_URL}` +
+                    `${profileData.memberResponse.memberImage?.fileUrl}`
+                  : "/assets/cats/cat.png"
+              }
               alt="profileimg"
-              style={{ width: "150px" }}
+              // style={{ width: "150px" }}
             />
-          )}
+          </div>
         </div>
+        <img
+          className="profilesetting"
+          src="/assets/icons/set.png"
+          alt=""
+          onClick={showModal}
+        />
+        {modalOpen && (
+          <ProfileModal closeModal={setModalOpen} data={profileData} />
+        )}
         <div
           className="profilefollowContainer"
           style={{
@@ -118,42 +141,45 @@ function Profile(props) {
           point={profileData.memberStatusResponse.point}
         />
       </div>
-      {/* <p className="usernewBee">
-        초보자 : {profileData.memberStatusResponse.newBee ? "Newbee" : "Expert"}
-      </p> */}
-      <div
-        className="profileBottom"
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          // borderBottom: "1px solid #000",
-        }}
-      >
+      <div className="profileBottom">
         <div className="profiletoggleBar" style={{ display: "flex" }}>
           <button
             onClick={() => handleToggle("myPosts")}
-            style={{
-              background: activeView === "myPosts" ? "#ccc" : "transparent",
-            }}
+            className={
+              activeView === "myPosts" ? "profileactive" : "profiledefault"
+            }
           >
-            내가 쓴 게시글
+            게시글
+          </button>
+          <button
+            onClick={() => handleToggle("likePosts")}
+            className={
+              activeView === "likePosts" ? "profileactive" : "profiledefault"
+            }
+          >
+            좋아요한 게시글
           </button>
           <button
             onClick={() => handleToggle("aquarium")}
-            style={{
-              background: activeView === "aquarium" ? "#ccc" : "transparent",
-            }}
+            className={
+              activeView === "aquarium" ? "profileactive" : "profiledefault"
+            }
           >
             수조
           </button>
         </div>
-        {activeView === "myPosts" ? (
+        {activeView === "myPosts" && (
           <div className="profileMiddle">
             <Mypost id={temp} ver="my-post" />
+          </div>
+        )}
+        {activeView === "likePosts" && (
+          <div className="profileMiddle">
             <Mypost id={temp} ver="my-like" />
           </div>
-        ) : (
-          <div className="profileaquarium">
+        )}
+        {activeView === "aquarium" && (
+          <div className="profileMiddle">
             <p>아쿠아리움</p>
           </div>
         )}

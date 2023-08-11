@@ -10,29 +10,45 @@ const Inventory = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [inventoryData, setInventoryData] = useState({});
+  const [fishBowlData, setFishBowlData] = useState({});
 
   useEffect(() => {
-    const getInventory = async () => {
-      try {
-        setLoading(true);
-
-        const response = await authorizedRequest({
-          method: "get",
-          url: `/api/fishes/inventory/view`,
-        });
-
-        console.log("response success", response.data.data);
-        setInventoryData(response.data.data);
-        // console.log("inven data =", inventoryData[0]);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching inventory");
-        setError("데이터 로드에 실패했습니다.");
-        setLoading(false);
-      }
-    };
     getInventory();
+    getFishBowl();
   }, []);
+
+  const getInventory = async () => {
+    try {
+      setLoading(true);
+
+      const response = await authorizedRequest({
+        method: "get",
+        url: `api1/api/fishes/inventory/view`,
+      });
+
+      console.log("response success", response.data.data);
+      setInventoryData(response.data.data);
+      // console.log("inven data =", inventoryData[0]);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching inventory");
+      setError("데이터 로드에 실패했습니다.");
+      setLoading(false);
+    }
+  };
+
+  const getFishBowl = async () => {
+    try {
+      const response = await authorizedRequest({
+        method: "get",
+        url: "/api1/api/fishes/fishbowl/view",
+      });
+      setFishBowlData(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error posting data:", error);
+    }
+  };
 
   const goBack = () => {
     if (window && window.history && typeof window.history.back === "function") {
@@ -45,7 +61,7 @@ const Inventory = () => {
     try {
       const response = await authorizedRequest({
         method: "post",
-        url: `/api/fishes/inventory/delete`,
+        url: `api1/api/fishes/inventory/delete`,
         data: {
           inventoryId: deletedFishInfo.inventoryId,
         },
@@ -74,7 +90,7 @@ const Inventory = () => {
 
       const response = await authorizedRequest({
         method: "post",
-        url: `/api/fishes/catch`,
+        url: `api1/api/fishes/catch`,
         data: fish,
       });
 
@@ -113,8 +129,26 @@ const Inventory = () => {
             const fish = inventoryData[key];
             return (
               <ItemSlide
+                key={`inven${fish.inventoryId}`}
                 fishInfo={fish}
+                isFishBowl="false"
                 onDeleteSlide={() => handleDeleteSlide(inventoryData[key])}
+              />
+            );
+          })}
+          {/* dummy start */}
+
+          {/* dummy end */}
+        </div>
+        <div className="inven-carousel inven-disable-scrollbar">
+          {Object.keys(fishBowlData).map((key) => {
+            const fish = fishBowlData[key];
+            return (
+              <ItemSlide
+                key={`fishbowl${fish.fishBowlId}`}
+                fishInfo={fish}
+                isFishBowl="true"
+                onDeleteSlide={() => handleDeleteSlide(fishBowlData[key])}
               />
             );
           })}
