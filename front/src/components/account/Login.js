@@ -9,6 +9,7 @@ import AuthInput from "./Authinput";
 import useInput from "./use_input";
 import emailInput from "./email_input";
 // import { getData, postData } from "../../utils/api";
+import "./Login.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isValidEmailFormat = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
@@ -20,6 +21,11 @@ function Login(props) {
   const [userData, setUserData] = useRecoilState(loginuser);
   const [accesstoken, setAccessToken] = useRecoilState(token);
   const navigate = useNavigate();
+  const CLIENT_ID = "6a4bb2fa60ad461ae820953255846ebf";
+  const REDIRECT_URI =
+    "http://passportlkm.iptime.org:20101/login/oauth2/code/kakao";
+  const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+
   // useEffect(() => {
   //   if (accesstoken) {
   //     navigate('/');
@@ -49,15 +55,11 @@ function Login(props) {
       loginHandleClick();
     }
   };
-  const logout = () => {
-    setUserData(null);
-    console.log(userData);
-    setAccessToken(null);
-    console.log(accesstoken);
-    localStorage.setItem("key", null);
-    const tt = localStorage.getItem("key");
-    console.log(tt);
+
+  const register = () => {
+    navigate("/Signup");
   };
+
   const loginHandleClick = async () => {
     const loginData = { email: userIdValue, password: userPasswordValue };
 
@@ -148,14 +150,7 @@ function Login(props) {
         style={{ width: "150px", height: "150px" }}
       />
 
-      <div
-        style={{
-          display: "inline-block",
-          width: "200px",
-          height: "240px",
-          margin: "30px 0px 0px 0px",
-        }}
-      >
+      <div className="logininputbox">
         <AuthInput
           label="아이디"
           type="text"
@@ -180,26 +175,28 @@ function Login(props) {
           $errorText="필수 입력값입니다"
           onKeyPress={loginHandleKey}
         />
-
-        <Button
-          as="input"
-          type="button"
-          value="로그인"
-          style={{ margin: "10px 0px 0px 0px" }}
-          onClick={loginHandleClick}
-        />
-        <Button
-          as="input"
-          type="button"
-          value="로그아웃"
-          style={{ margin: "10px 0px 0px 0px" }}
-          onClick={logout}
-        />
+        <div className="loginbuttonbox">
+          <Button
+            as="input"
+            type="button"
+            value="로그인"
+            style={{ margin: "auto" }}
+            onClick={loginHandleClick}
+          />
+        </div>
       </div>
       <div
         className="border-top"
-        style={{ width: "200px", margin: "10px 0px 0px 0px" }}
+        style={{ width: "250px", margin: "10px 0px 0px 0px" }}
       >
+        <p style={{ fontSize: "13px" }}>
+          Don't have an account?{" "}
+          <span onClick={register} style={{ color: "blue" }}>
+            Register me
+          </span>
+        </p>
+
+        <div className="loginsocial"></div>
         <Button
           as="input"
           onClick={() => socialLoginHandler("google")}
@@ -208,8 +205,8 @@ function Login(props) {
           style={{
             backgroundColor: "white",
             color: "black",
-            width: "50%",
-            height: "40%",
+            width: "30%",
+            height: "30%",
             backgroundImage: `url(/assets/icons/Google1.png)`,
             backgroundSize: "cover",
             backgroundPosition: "left center",
@@ -224,22 +221,19 @@ function Login(props) {
           style={{
             backgroundColor: "yellow",
             color: "black",
-            width: "50%",
-            height: "40%",
+            width: "30%",
+            height: "30%",
             backgroundImage: `url(/assets/icons/kakao_login_large.png)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         ></Button>
-
-        <Link to="/Signup" className="nav-link">
-          <Button
-            as="input"
-            type="button"
-            value="회원가입"
-            style={{ margin: "10px 0px 0px 0px" }}
-          />
-        </Link>
+        <a
+          // href={KAKAO_AUTH_URL}
+          href="api1/oauth2/authorization/google"
+        >
+          <p>123</p>
+        </a>
       </div>
     </div>
   );
