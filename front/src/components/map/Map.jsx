@@ -29,11 +29,11 @@ function Map2() {
   const [inputData, setinputData] = useState("");
   const [searchData, setSearchData] = useState([]);
   const [myLocation, setMyLocation] = useState(null);
-  const [newbie, setNewbie] = useRecoilState(newbie_recoil);
+  const [newbie] = useRecoilState(newbie_recoil);
   const [step, setStep] = useState(1);
   const [mooltae, setMooltae] = useRecoilState(mooltae_recoil);
   const lunar = require("cky-lunar-calendar");
-  const [tts, setTts] = useRecoilState(tts_recoil);
+  const [tts] = useRecoilState(tts_recoil);
   const [show, setShow] = useState(false);
   const [weatherInfo, setWeatherInfo] = useRecoilState(weatherInfo_recoil);
   const [location, setLocation] = useRecoilState(location_recoil);
@@ -41,11 +41,11 @@ function Map2() {
   const { state } = useLocation();
   const now = new Date();
   const targetHours = [2, 5, 8, 11, 14, 17, 20, 23];
+  const talkContents = Talk2(); // Talk2Component를 호출하여 반환된 배열을 저장
 
+  // 현재위치 받아오기 렌더링 순서 달라서 재정비해야함
   useEffect(() => {
     handlebutton();
-    // console.log(fishingspot);
-    // load();
   }, []);
 
   const handlebutton = () => {
@@ -68,6 +68,7 @@ function Map2() {
       try {
         const locationData = await GetLocation();
         // 위치 데이터를 이용한 추가 작업
+        console.log(locationData);
         setLocation(locationData);
         // {latitude: 35.1029935, longitude: 128.8519049}
       } catch (error) {
@@ -371,16 +372,18 @@ function Map2() {
     <div>
       {!modalOpen && newbie ? (
         <div className="map-newbie-talk-box">
-          {Talk2[step].content}
-          {Talk2[step].content && <TTS message={Talk2[step].content} />}
+          {talkContents[step].content}
+          {talkContents[step].content && (
+            <TTS message={talkContents[step].content} />
+          )}
           {show && (
             <div
               className="next"
               onClick={() => {
                 if (step === 1) {
                   setMyLocation({
-                    lat: Talk2[1]?.spot_lat,
-                    lng: Talk2[1]?.spot_lng,
+                    lat: talkContents[1]?.spot_lat,
+                    lng: talkContents[1]?.spot_lng,
                   });
                   next();
                 } else {
