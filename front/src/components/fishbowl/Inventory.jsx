@@ -92,7 +92,7 @@ const Inventory = () => {
     try {
       setLoading(true);
       const fish = {
-        name: "우럭",
+        name: "벵에돔",
         size: 41.3,
       };
 
@@ -145,9 +145,6 @@ const Inventory = () => {
               />
             );
           })}
-          {/* dummy start */}
-
-          {/* dummy end */}
         </div>
         <div className="inven-carousel inven-disable-scrollbar">
           {Object.keys(fishBowlData).map((key) => {
@@ -162,9 +159,6 @@ const Inventory = () => {
               />
             );
           })}
-          {/* dummy start */}
-          {/* <p>{itemData}</p> */}
-          {/* dummy end */}
         </div>
       </div>
     </div>
