@@ -33,7 +33,7 @@ services:
       dockerfile: dockerfile_test
     image: react-image/react:latest
     ports:
-      - "3000:3000"
+      - "3001:3000"
     networks:
       - spring-redis
     container_name: react
