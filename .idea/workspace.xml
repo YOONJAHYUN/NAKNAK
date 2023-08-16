@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b34fc0ae-5f89-4d41-a95a-9298864ebc76" name="Changes" comment="devops spring  aws ec2에 올리기">
+      <change beforePath="$PROJECT_DIR$/back/Spring/fisher/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/back/Spring/fisher/src/main/resources/application-prod.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/develop" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2T96ne5YBAuzKZmP0cr1PDoFpcf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "deploy"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SSAFY\S09P12E105\DEV" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b34fc0ae-5f89-4d41-a95a-9298864ebc76" name="Changes" comment="" />
+      <created>1690443117925</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690443117925</updated>
+      <workItem from="1690874869581" duration="637000" />
+      <workItem from="1690937042038" duration="11013000" />
+      <workItem from="1691028620795" duration="939000" />
+      <workItem from="1691046290699" duration="615000" />
+      <workItem from="1691547476836" duration="7671000" />
+      <workItem from="1691715839008" duration="1326000" />
+      <workItem from="1691717198391" duration="12848000" />
+      <workItem from="1691979962289" duration="8674000" />
+      <workItem from="1691997361655" duration="940000" />
+    </task>
+    <task id="LOCAL-00001" summary="devops spring  aws ec2에 올리기">
+      <option name="closed" value="true" />
+      <created>1690443596760</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690443596760</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="devops spring  aws ec2에 올리기" />
+    <option name="LAST_COMMIT_MESSAGE" value="devops spring  aws ec2에 올리기" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1691996541874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1691996541874" />
+    <state x="527" y="239" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1690956179791">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="527" y="239" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1690956179791" />
+    <state x="593" y="186" key="FileChooserDialogImpl" timestamp="1691998308406">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="593" y="186" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1691998308406" />
+    <state x="338" y="0" key="SettingsEditor" timestamp="1691995789858">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="338" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1691995789858" />
+    <state x="459" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1691997361522">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="459" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1691997361522" />
+    <state x="503" y="9" width="618" height="807" key="find.popup" timestamp="1691737463611">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="503" y="9" width="618" height="807" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1691737463611" />
+    <state x="439" y="88" width="672" height="676" key="search.everywhere.popup" timestamp="1691724583252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="439" y="88" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1691724583252" />
+  </component>
+</project>

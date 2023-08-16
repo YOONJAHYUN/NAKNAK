@@ -7,6 +7,7 @@ import AuthInput from "./Authinput";
 import useInput from "./use_input";
 import emailInput from "./email_input";
 import "./signup.css";
+import swal from "sweetalert";
 
 function Signup(props) {
   const [loading, setLoading] = useState(false);
@@ -99,25 +100,30 @@ function Signup(props) {
 
     if (!signupData.email) {
       console.log("이메일은 필수 입력값입니다.");
+      swal("이메일을 입력해주세요");
       return;
     }
     if (!isValidEmailFormat(signupData.email)) {
       console.log("이메일 형식이 올바르지 않습니다.");
+      swal("이메일 형식이 올바르지 않습니다");
       return;
     }
 
     if (!signupData.password) {
       console.log("비밀번호는 필수 입력값입니다.");
+      swal("비밀번호를 입력해주세요");
       return;
     }
 
     if (!signupData.name) {
       console.log("이름은 필수 입력값입니다.");
+      swal("이름을 입력해주세요");
       return;
     }
 
     if (!signupData.nickname) {
       console.log("별명은 필수 입력값입니다.");
+      swal("닉네임을 입력해주세요");
       return;
     }
 
@@ -148,20 +154,14 @@ function Signup(props) {
       setLoading(false);
     } catch (error) {
       console.log(signupData);
-      console.error("Error posting data:", error);
-      setError("데이터 전송에 실패했습니다.");
+      console.error("Error posting data:", error.response.data.message);
+      if (error.response.data.message === "Email Already Exists") {
+        swal("이미 등록된 이메일입니다");
+      }
+      // setError("데이터 전송에 실패했습니다.");
       setLoading(false);
     }
   };
-
-  // const signupHandleChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setSignupData({ ...signupData, [name]: value });
-  // };
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className="signup-container">
@@ -175,7 +175,6 @@ function Signup(props) {
           label="이메일"
           type="text"
           id="userId"
-          s
           placeholder="이메일 입력"
           $value={userIdValue}
           onChange={userIdChangeHandler}
@@ -230,7 +229,9 @@ function Signup(props) {
               style={{ width: "100px", height: "100px" }}
               className="signup-image"
             />
-            <span className="custom-file-button">파일선택</span>
+            <span className="custom-file-button" htmlFor="profileImg">
+              파일선택
+            </span>
           </div>
           {/* // 이미지 업로드 input */}
           <form>
