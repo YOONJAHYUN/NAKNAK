@@ -11,6 +11,8 @@
 [8. 시스템 아키덱처](#8-시스템-아키텍처)
 [9. 개발일지](#9-개발일지)
 </div> </details>
+
+
 # 1. 개요
 
 ---
@@ -23,8 +25,6 @@
 ---
 
 **낚시 초보들을 위한 A to Z 어플리케이션**
-
-![a55dc2dcf9b1735cc20790cc1032735d8831603b.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\80edd34be893dca4dffffe85cc9a364d89390cfc.png)
 
 <aside>
 💡 저희 팀은 초보자를 위한 낚시 어플 서비스 “낚낚” 을 만들었습니다.
@@ -50,17 +50,19 @@
 
 ## 3.1 뉴비 컨텐츠
 
-![Untitled](C:\Users\SSAFY\AppData\Roaming\marktext\images\9578ae5dff495d0ba07c5cfc46fc023d637e7d7b.png)
+![뉴비모드1.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\1504bed906f566b69026bd3661d6c4e6762ccc6b.png)
 
-![Untitled](C:\Users\SSAFY\AppData\Roaming\marktext\images\2785558eed73aaa0b711f6313ba2f851719f8e9a.png)
+![뉴비모드2.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\2d6040029a2de910cde77f8f2edb7e96c534442d.png)
 
-![Untitled](C:\Users\SSAFY\AppData\Roaming\marktext\images\042a96084c1ae2e0f2fec66338751f5e7e1c28e2.png)
+![뉴비모드3.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\b322561dd2425175c70ab508e8d3c86766e98190.png)
 
-![Untitled](C:\Users\SSAFY\AppData\Roaming\marktext\images\b9df1dace01a8fc307590a11cc90288440acd16e.png)
+![뉴비모드4.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\e8fcaf0eb8b27ed1c3e8b946457115d83ee1382f.png)
 
-![Untitled](C:\Users\SSAFY\AppData\Roaming\marktext\images\aededf50d6f45259438fb1f2293bea067b788e9d.png)
+![뉴비모드5.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\8840dc5d7bdb1f3de56b3d89aa94999dcd9ef3bb.png)
 
-![뉴비모드6.png](<%E1%84%80%E1%85%A9%E1%86%BC%E1%84%90%E1%85%A9%E1%86%BCPJT%20%E1%84%82%E1%85%A1%E1%86%A9%E1%84%82%E1%85%A1%E1%86%A9(NAKNAK)%20b518d613f1704404843ace5785d484d0/%25EB%2589%25B4%25EB%25B9%2584%25EB%25AA%25A8%25EB%2593%259C6.png>)
+![뉴비모드6.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\be96b20f4e66405884c73b1e9bca15a6be5a70f2.png)
+
+
 
 - 질문을 통해 유저에게 맞는 낚시 방법 추천 및 해당 낚시에 대해 알림
 - 어플 사용법 간단히 알려줌
@@ -68,13 +70,11 @@
 
 ## 3.2 물고기 계측 및 관리
 
-![Untitled](<C:\Users\SSAFY\Desktop\공통PJT%20낚낚(NAKNAK)%20b518d613f1704404843ace5785d484d0\Untitled%205.png>)
+![카메라1.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\c7c2dc03d2236bd26eaf75560c60f4fe005d65c6.png)
 
-![Untitled](<C:\Users\SSAFY\Desktop\공통PJT%20낚낚(NAKNAK)%20b518d613f1704404843ace5785d484d0\Untitled%206.png>)
+![포획1.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\77f3e01fd78cb88247acee78f76f3443491b72a6.png)
 
-![Untitled](<C:\Users\SSAFY\Desktop\공통PJT%20낚낚(NAKNAK)%20b518d613f1704404843ace5785d484d0\Untitled%207.png>)
 
-![Untitled](<C:\Users\SSAFY\Desktop\공통PJT%20낚낚(NAKNAK)%20b518d613f1704404843ace5785d484d0\Untitled%208.png>)
 
 - 물고기와 마커를 인식시켜 물고기의 크기, 종류를 식별해 데이터화함
 - 자바스크립트를 통해 사용자 디바이스에서 작동하여 서버자원의 유한성에서 탈피 가능
@@ -82,39 +82,47 @@
 
 ## 3.3 낚시터 찾기
 
-![낚시터1.png](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\낚시터1.png)
+![낚시터1.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\af9abb891c65b29d3b89d031b615c83ea2fb979a.png)
 
-![낚시터2.png](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\낚시터2.png)
+![낚시터2.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\6c2b4485989af538959ffee9aa67ffbac3f04b45.png)
 
-![낚시터3.png](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\낚시터3.png)
+![낚시터3.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\fb7ca5ad8922b965a0671cbd324af3f2590cd4d5.png)
+
+
 
 - 카카오맵 api 와 기상청 단기예보api 를 활용해 낚시터에 필요한 정보 제공
+
 - 지정된 낚시터 외의 정보도 볼 수 있음
 
 ## 3.3 낚시모드
 
-![피싱모드1.png](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\낚시모드1.png)
+![피싱모드1.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\9aecbd9987bf617dbda156161f66387c36ccaf2e.png)
 
-![피싱모드2.png](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\낚시모드2.png)
+![피싱모드2.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\8b55a45c3124015921070462017056b56933eb72.png)
 
-![피싱모드3.png](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\피싱모드3.png)
+![피싱모드3.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\782419d8a50e1cbd962b7014c795186c056202c3.png)
+
+
 
 - 낚시모드를 진행할 때 획득한 물고기 수를 나타내주어 유저에게 흥미와 즐거움 제공
+
 - 낚시모드를 켠 상태로 어플을 끄더라도 재접속시 낚시모드가 계속 진행 중으로 표기
 
 ## 3.4 SNS
 
-![내프로필.png](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\내프로필1.png)
+![sns1.gif](C:\Users\SSAFY\AppData\Roaming\marktext\images\fc9be0e200d39918d373ab7f51a880ff030a3ec7.gif)
 
-![sns1.gif](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\내프로필2.png)
 
-![내프로필모음.png](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\내프로필3.png)
+
+![내프로필모음.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\c1d67e4ca20e0516e8931b8b1494b64076ef8eac.png)
 
 ## 3.5 로그인 및 회원가입
 
-![로그인.png](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\회원가입.png)
+![로그인.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\cdd4a3fd82a00e5ba5415d1218bbab67f4a6861e.png)
 
-![회원가입.png](C:\Users\SSAFY\Desktop\낚낚\캡쳐본\로그인.png)
+![회원가입.png](C:\Users\SSAFY\AppData\Roaming\marktext\images\77ac4cf5e413de842797ceef1dcfe2e823a77f11.png)
+
+
 
 # 4. 역할 분담
 
@@ -182,7 +190,7 @@ UX/UI 설계, 뉴비페이지 컨텐츠 제작 및 TTS연결, 기상청 api 카�
 
 ---
 
-![db3ffd49a3af91a511ae92f4c30c51ccd3a6997a.png](<C:\Users\SSAFY\Desktop\공통PJT%20낚낚(NAKNAK)%20b518d613f1704404843ace5785d484d0\db3ffd49a3af91a511ae92f4c30c51ccd3a6997a.png>)
+![](C:\Users\SSAFY\AppData\Roaming\marktext\images\2023-08-28-15-52-55-db3ffd49a3af91a511ae92f4c30c51ccd3a6997a.png)
 
 # 7. 프로젝트 구조도
 
@@ -201,194 +209,193 @@ UX/UI 설계, 뉴비페이지 컨텐츠 제작 및 TTS연결, 기상청 api 카�
 ```
 
 - <details> <summary>front</summary> <div markdown="1">
-  📦src
-   ┣ 📂api
-   ┃ ┣ 📜BadanuriAPI.js
-   ┃ ┣ 📜KMAAPI.js
-   ┃ ┣ 📜SeaAPI.js
-   ┃ ┗ 📜WeatherAPI.js
-   ┣ 📂components
-   ┃ ┣ 📂account
-   ┃ ┃ ┣ 📜Api.js
-   ┃ ┃ ┣ 📜Authinput.jsx
-   ┃ ┃ ┣ 📜AxiosInterceptor.js
-   ┃ ┃ ┣ 📜email_input.js
-   ┃ ┃ ┣ 📜Kakao.jsx
-   ┃ ┃ ┣ 📜Login.css
-   ┃ ┃ ┣ 📜Login.js
-   ┃ ┃ ┣ 📜signup.css
-   ┃ ┃ ┣ 📜Signup.js
-   ┃ ┃ ┣ 📜test.css
-   ┃ ┃ ┣ 📜test.js
-   ┃ ┃ ┣ 📜Userupdate.js
-   ┃ ┃ ┗ 📜use_input.js
-   ┃ ┣ 📂achievements
-   ┃ ┃ ┣ 📜Achievements.jsx
-   ┃ ┃ ┣ 📜quest.css
-   ┃ ┃ ┣ 📜QuestDetailModal.css
-   ┃ ┃ ┣ 📜QuestDetailModal.jsx
-   ┃ ┃ ┗ 📜Questlist.jsx
-   ┃ ┣ 📂board
-   ┃ ┃ ┣ 📜Board.css
-   ┃ ┃ ┣ 📜Board.jsx
-   ┃ ┃ ┣ 📜CreateFeed.css
-   ┃ ┃ ┣ 📜CreateFeed.jsx
-   ┃ ┃ ┣ 📜DeleteFeed.css
-   ┃ ┃ ┣ 📜DeleteFeed.jsx
-   ┃ ┃ ┣ 📜DeleteFeedModal.jsx
-   ┃ ┃ ┣ 📜Feed.css
-   ┃ ┃ ┣ 📜Feed.jsx
-   ┃ ┃ ┣ 📜FeedTag.css
-   ┃ ┃ ┣ 📜FeedTag.jsx
-   ┃ ┃ ┣ 📜ModifyFeed.css
-   ┃ ┃ ┗ 📜ModifyFeed.jsx
-   ┃ ┣ 📂camera
-   ┃ ┃ ┣ 📂components
-   ┃ ┃ ┃ ┗ 📜loader.js
-   ┃ ┃ ┣ 📂style
-   ┃ ┃ ┃ ┣ 📜App.css
-   ┃ ┃ ┃ ┗ 📜loader.css
-   ┃ ┃ ┣ 📂utils
-   ┃ ┃ ┃ ┣ 📜detect.js
-   ┃ ┃ ┃ ┣ 📜download.js
-   ┃ ┃ ┃ ┣ 📜labels.js
-   ┃ ┃ ┃ ┣ 📜labels.json
-   ┃ ┃ ┃ ┗ 📜renderBox.js
-   ┃ ┃ ┣ 📜Camera.css
-   ┃ ┃ ┣ 📜Camera.jsx
-   ┃ ┃ ┣ 📜Detectdata.js
-   ┃ ┃ ┣ 📜Getfish.css
-   ┃ ┃ ┗ 📜Getfish.jsx
-   ┃ ┣ 📂common
-   ┃ ┃ ┣ 📜Background.css
-   ┃ ┃ ┣ 📜Background.jsx
-   ┃ ┃ ┣ 📜Footer.css
-   ┃ ┃ ┣ 📜Footer.js
-   ┃ ┃ ┣ 📜Loading.css
-   ┃ ┃ ┣ 📜Loading.jsx
-   ┃ ┃ ┣ 📜NotFound.js
-   ┃ ┃ ┗ 📜server.js
-   ┃ ┣ 📂dict
-   ┃ ┃ ┣ 📜Dict.css
-   ┃ ┃ ┣ 📜Dict.jsx
-   ┃ ┃ ┣ 📜Dictdetail.css
-   ┃ ┃ ┣ 📜Dictdetail.jsx
-   ┃ ┃ ┣ 📜Dictlist.css
-   ┃ ┃ ┗ 📜Dictlist.js
-   ┃ ┣ 📂dogam
-   ┃ ┃ ┣ 📜Dogam.css
-   ┃ ┃ ┣ 📜Dogam.jsx
-   ┃ ┃ ┣ 📜FishDetailModal.css
-   ┃ ┃ ┗ 📜FishDetailModal.jsx
-   ┃ ┣ 📂fishbowl
-   ┃ ┃ ┣ 📜Balls.jsx
-   ┃ ┃ ┣ 📜Bowl.jsx
-   ┃ ┃ ┣ 📜fishbowl.png
-   ┃ ┃ ┣ 📜fishbowl2.png
-   ┃ ┃ ┣ 📜fishbowl3.jpg
-   ┃ ┃ ┣ 📜index.js
-   ┃ ┃ ┣ 📜Inventory.css
-   ┃ ┃ ┣ 📜Inventory.jsx
-   ┃ ┃ ┣ 📜ItemSlide.jsx
-   ┃ ┃ ┣ 📜Profileballs.jsx
-   ┃ ┃ ┣ 📜Profilesea.jsx
-   ┃ ┃ ┣ 📜SeaScene.css
-   ┃ ┃ ┣ 📜SeaScene.js
-   ┃ ┃ ┣ 📜SlideInnerMenu.css
-   ┃ ┃ ┣ 📜SlideInnerMenu.jsx
-   ┃ ┃ ┗ 📜style.css
-   ┃ ┣ 📂fishing
-   ┃ ┃ ┣ 📜Fish.js
-   ┃ ┃ ┣ 📜Fishing.css
-   ┃ ┃ ┣ 📜Fishing.js
-   ┃ ┃ ┣ 📜Fishpic.css
-   ┃ ┃ ┣ 📜Fishpic.js
-   ┃ ┃ ┣ 📜Getfish.js
-   ┃ ┃ ┣ 📜Nowget.css
-   ┃ ┃ ┣ 📜Nowget.js
-   ┃ ┃ ┣ 📜Picresult.jsx
-   ┃ ┃ ┣ 📜StopWatch.css
-   ┃ ┃ ┗ 📜StopWatch.js
-   ┃ ┣ 📂freshman
-   ┃ ┃ ┣ 📜Checkbox.css
-   ┃ ┃ ┣ 📜Checkbox.jsx
-   ┃ ┃ ┣ 📜Checklist.css
-   ┃ ┃ ┣ 📜Checklist.jsx
-   ┃ ┃ ┣ 📜Firstpage.css
-   ┃ ┃ ┣ 📜Firstpage.jsx
-   ┃ ┃ ┣ 📜Freshman.css
-   ┃ ┃ ┣ 📜Freshman.jsx
-   ┃ ┃ ┣ 📜Lure.js
-   ┃ ┃ ┣ 📜Newbie.css
-   ┃ ┃ ┣ 📜Newbie.jsx
-   ┃ ┃ ┣ 📜Onetwo.js
-   ┃ ┃ ┣ 📜Secondpage.css
-   ┃ ┃ ┣ 📜Secondpage.jsx
-   ┃ ┃ ┣ 📜Talk.js
-   ┃ ┃ ┣ 📜Talk2.js
-   ┃ ┃ ┣ 📜TTS.jsx
-   ┃ ┃ ┗ 📜upgradeProgress.jsx
-   ┃ ┣ 📂map
-   ┃ ┃ ┣ 📜badanuriPositions.js
-   ┃ ┃ ┣ 📜FavoriteSpot.jsx
-   ┃ ┃ ┣ 📜FavoriteSpots.css
-   ┃ ┃ ┣ 📜FavoriteSpots.jsx
-   ┃ ┃ ┣ 📜GetXY.jsx
-   ┃ ┃ ┣ 📜Map.css
-   ┃ ┃ ┣ 📜Map.jsx
-   ┃ ┃ ┣ 📜MapInfo.json
-   ┃ ┃ ┣ 📜MapModal.css
-   ┃ ┃ ┣ 📜MapModal.jsx
-   ┃ ┃ ┣ 📜markerPositions.js
-   ┃ ┃ ┗ 📜Weather.jsx
-   ┃ ┣ 📂user
-   ┃ ┃ ┣ 📜Follower.jsx
-   ┃ ┃ ┣ 📜FollowerModal.js
-   ┃ ┃ ┣ 📜Following.jsx
-   ┃ ┃ ┣ 📜FollowModal.css
-   ┃ ┃ ┣ 📜Mypost.jsx
-   ┃ ┃ ┣ 📜profile.css
-   ┃ ┃ ┣ 📜Profile.jsx
-   ┃ ┃ ┣ 📜Profileinventory.css
-   ┃ ┃ ┣ 📜Profileinventory.jsx
-   ┃ ┃ ┣ 📜ProfileModal.js
-   ┃ ┃ ┗ 📜profileStyle.js
-   ┃ ┣ 📜Home.css
-   ┃ ┗ 📜Home.jsx
-   ┣ 📂temp
-   ┃ ┗ 📂Teacherable
-   ┃ ┃ ┣ 📂my_model
-   ┃ ┃ ┃ ┣ 📜metadata.json
-   ┃ ┃ ┃ ┣ 📜model.json
-   ┃ ┃ ┃ ┗ 📜weights.bin
-   ┃ ┃ ┣ 📜AxiosTest.js
-   ┃ ┃ ┣ 📜ImgProcess.js
-   ┃ ┃ ┗ 📜ImgTest.jsx
-   ┣ 📂utils
-   ┃ ┣ 📂data
-   ┃ ┃ ┣ 📜challenge.csv
-   ┃ ┃ ┣ 📜challenge.js
-   ┃ ┃ ┣ 📜fishingspot.json
-   ┃ ┃ ┣ 📜point.js
-   ┃ ┃ ┣ 📜quest.js
-   ┃ ┃ ┗ 📜tmi.js
-   ┃ ┣ 📂video
-   ┃ ┃ ┣ 📜casting.mp4
-   ┃ ┃ ┗ 📜reel.mp4
-   ┃ ┣ 📜api.js
-   ┃ ┣ 📜atoms.js
-   ┃ ┣ 📜FontAwesome.jsx
-   ┃ ┣ 📜location.js
-   ┃ ┗ 📜util.js
-   ┣ 📜App.css
-   ┣ 📜App.js
-   ┣ 📜AppRouter.jsx
-   ┣ 📜index.css
-   ┣ 📜index.jsx
-   ┣ 📜reportWebVitals.js
-   ┗ 📜setupProxy.js
-
-</div> </details>
+      📦src
+      ┣ 📂api
+      ┃ ┣ 📜BadanuriAPI.js
+      ┃ ┣ 📜KMAAPI.js
+      ┃ ┣ 📜SeaAPI.js
+      ┃ ┗ 📜WeatherAPI.js
+      ┣ 📂components
+      ┃ ┣ 📂account
+      ┃ ┃ ┣ 📜Api.js
+      ┃ ┃ ┣ 📜Authinput.jsx
+      ┃ ┃ ┣ 📜AxiosInterceptor.js
+      ┃ ┃ ┣ 📜email_input.js
+      ┃ ┃ ┣ 📜Kakao.jsx
+      ┃ ┃ ┣ 📜Login.css
+      ┃ ┃ ┣ 📜Login.js
+      ┃ ┃ ┣ 📜signup.css
+      ┃ ┃ ┣ 📜Signup.js
+      ┃ ┃ ┣ 📜test.css
+      ┃ ┃ ┣ 📜test.js
+      ┃ ┃ ┣ 📜Userupdate.js
+      ┃ ┃ ┗ 📜use_input.js
+      ┃ ┣ 📂achievements
+      ┃ ┃ ┣ 📜Achievements.jsx
+      ┃ ┃ ┣ 📜quest.css
+      ┃ ┃ ┣ 📜QuestDetailModal.css
+      ┃ ┃ ┣ 📜QuestDetailModal.jsx
+      ┃ ┃ ┗ 📜Questlist.jsx
+      ┃ ┣ 📂board
+      ┃ ┃ ┣ 📜Board.css
+      ┃ ┃ ┣ 📜Board.jsx
+      ┃ ┃ ┣ 📜CreateFeed.css
+      ┃ ┃ ┣ 📜CreateFeed.jsx
+      ┃ ┃ ┣ 📜DeleteFeed.css
+      ┃ ┃ ┣ 📜DeleteFeed.jsx
+      ┃ ┃ ┣ 📜DeleteFeedModal.jsx
+      ┃ ┃ ┣ 📜Feed.css
+      ┃ ┃ ┣ 📜Feed.jsx
+      ┃ ┃ ┣ 📜FeedTag.css
+      ┃ ┃ ┣ 📜FeedTag.jsx
+      ┃ ┃ ┣ 📜ModifyFeed.css
+      ┃ ┃ ┗ 📜ModifyFeed.jsx
+      ┃ ┣ 📂camera
+      ┃ ┃ ┣ 📂components
+      ┃ ┃ ┃ ┗ 📜loader.js
+      ┃ ┃ ┣ 📂style
+      ┃ ┃ ┃ ┣ 📜App.css
+      ┃ ┃ ┃ ┗ 📜loader.css
+      ┃ ┃ ┣ 📂utils
+      ┃ ┃ ┃ ┣ 📜detect.js
+      ┃ ┃ ┃ ┣ 📜download.js
+      ┃ ┃ ┃ ┣ 📜labels.js
+      ┃ ┃ ┃ ┣ 📜labels.json
+      ┃ ┃ ┃ ┗ 📜renderBox.js
+      ┃ ┃ ┣ 📜Camera.css
+      ┃ ┃ ┣ 📜Camera.jsx
+      ┃ ┃ ┣ 📜Detectdata.js
+      ┃ ┃ ┣ 📜Getfish.css
+      ┃ ┃ ┗ 📜Getfish.jsx
+      ┃ ┣ 📂common
+      ┃ ┃ ┣ 📜Background.css
+      ┃ ┃ ┣ 📜Background.jsx
+      ┃ ┃ ┣ 📜Footer.css
+      ┃ ┃ ┣ 📜Footer.js
+      ┃ ┃ ┣ 📜Loading.css
+      ┃ ┃ ┣ 📜Loading.jsx
+      ┃ ┃ ┣ 📜NotFound.js
+      ┃ ┃ ┗ 📜server.js
+      ┃ ┣ 📂dict
+      ┃ ┃ ┣ 📜Dict.css
+      ┃ ┃ ┣ 📜Dict.jsx
+      ┃ ┃ ┣ 📜Dictdetail.css
+      ┃ ┃ ┣ 📜Dictdetail.jsx
+      ┃ ┃ ┣ 📜Dictlist.css
+      ┃ ┃ ┗ 📜Dictlist.js
+      ┃ ┣ 📂dogam
+      ┃ ┃ ┣ 📜Dogam.css
+      ┃ ┃ ┣ 📜Dogam.jsx
+      ┃ ┃ ┣ 📜FishDetailModal.css
+      ┃ ┃ ┗ 📜FishDetailModal.jsx
+      ┃ ┣ 📂fishbowl
+      ┃ ┃ ┣ 📜Balls.jsx
+      ┃ ┃ ┣ 📜Bowl.jsx
+      ┃ ┃ ┣ 📜fishbowl.png
+      ┃ ┃ ┣ 📜fishbowl2.png
+      ┃ ┃ ┣ 📜fishbowl3.jpg
+      ┃ ┃ ┣ 📜index.js
+      ┃ ┃ ┣ 📜Inventory.css
+      ┃ ┃ ┣ 📜Inventory.jsx
+      ┃ ┃ ┣ 📜ItemSlide.jsx
+      ┃ ┃ ┣ 📜Profileballs.jsx
+      ┃ ┃ ┣ 📜Profilesea.jsx
+      ┃ ┃ ┣ 📜SeaScene.css
+      ┃ ┃ ┣ 📜SeaScene.js
+      ┃ ┃ ┣ 📜SlideInnerMenu.css
+      ┃ ┃ ┣ 📜SlideInnerMenu.jsx
+      ┃ ┃ ┗ 📜style.css
+      ┃ ┣ 📂fishing
+      ┃ ┃ ┣ 📜Fish.js
+      ┃ ┃ ┣ 📜Fishing.css
+      ┃ ┃ ┣ 📜Fishing.js
+      ┃ ┃ ┣ 📜Fishpic.css
+      ┃ ┃ ┣ 📜Fishpic.js
+      ┃ ┃ ┣ 📜Getfish.js
+      ┃ ┃ ┣ 📜Nowget.css
+      ┃ ┃ ┣ 📜Nowget.js
+      ┃ ┃ ┣ 📜Picresult.jsx
+      ┃ ┃ ┣ 📜StopWatch.css
+      ┃ ┃ ┗ 📜StopWatch.js
+      ┃ ┣ 📂freshman
+      ┃ ┃ ┣ 📜Checkbox.css
+      ┃ ┃ ┣ 📜Checkbox.jsx
+      ┃ ┃ ┣ 📜Checklist.css
+      ┃ ┃ ┣ 📜Checklist.jsx
+      ┃ ┃ ┣ 📜Firstpage.css
+      ┃ ┃ ┣ 📜Firstpage.jsx
+      ┃ ┃ ┣ 📜Freshman.css
+      ┃ ┃ ┣ 📜Freshman.jsx
+      ┃ ┃ ┣ 📜Lure.js
+      ┃ ┃ ┣ 📜Newbie.css
+      ┃ ┃ ┣ 📜Newbie.jsx
+      ┃ ┃ ┣ 📜Onetwo.js
+      ┃ ┃ ┣ 📜Secondpage.css
+      ┃ ┃ ┣ 📜Secondpage.jsx
+      ┃ ┃ ┣ 📜Talk.js
+      ┃ ┃ ┣ 📜Talk2.js
+      ┃ ┃ ┣ 📜TTS.jsx
+      ┃ ┃ ┗ 📜upgradeProgress.jsx
+      ┃ ┣ 📂map
+      ┃ ┃ ┣ 📜badanuriPositions.js
+      ┃ ┃ ┣ 📜FavoriteSpot.jsx
+      ┃ ┃ ┣ 📜FavoriteSpots.css
+      ┃ ┃ ┣ 📜FavoriteSpots.jsx
+      ┃ ┃ ┣ 📜GetXY.jsx
+      ┃ ┃ ┣ 📜Map.css
+      ┃ ┃ ┣ 📜Map.jsx
+      ┃ ┃ ┣ 📜MapInfo.json
+      ┃ ┃ ┣ 📜MapModal.css
+      ┃ ┃ ┣ 📜MapModal.jsx
+      ┃ ┃ ┣ 📜markerPositions.js
+      ┃ ┃ ┗ 📜Weather.jsx
+      ┃ ┣ 📂user
+      ┃ ┃ ┣ 📜Follower.jsx
+      ┃ ┃ ┣ 📜FollowerModal.js
+      ┃ ┃ ┣ 📜Following.jsx
+      ┃ ┃ ┣ 📜FollowModal.css
+      ┃ ┃ ┣ 📜Mypost.jsx
+      ┃ ┃ ┣ 📜profile.css
+      ┃ ┃ ┣ 📜Profile.jsx
+      ┃ ┃ ┣ 📜Profileinventory.css
+      ┃ ┃ ┣ 📜Profileinventory.jsx
+      ┃ ┃ ┣ 📜ProfileModal.js
+      ┃ ┃ ┗ 📜profileStyle.js
+      ┃ ┣ 📜Home.css
+      ┃ ┗ 📜Home.jsx
+      ┣ 📂temp
+      ┃ ┗ 📂Teacherable
+      ┃ ┃ ┣ 📂my_model
+      ┃ ┃ ┃ ┣ 📜metadata.json
+      ┃ ┃ ┃ ┣ 📜model.json
+      ┃ ┃ ┃ ┗ 📜weights.bin
+      ┃ ┃ ┣ 📜AxiosTest.js
+      ┃ ┃ ┣ 📜ImgProcess.js
+      ┃ ┃ ┗ 📜ImgTest.jsx
+      ┣ 📂utils
+      ┃ ┣ 📂data
+      ┃ ┃ ┣ 📜challenge.csv
+      ┃ ┃ ┣ 📜challenge.js
+      ┃ ┃ ┣ 📜fishingspot.json
+      ┃ ┃ ┣ 📜point.js
+      ┃ ┃ ┣ 📜quest.js
+      ┃ ┃ ┗ 📜tmi.js
+      ┃ ┣ 📂video
+      ┃ ┃ ┣ 📜casting.mp4
+      ┃ ┃ ┗ 📜reel.mp4
+      ┃ ┣ 📜api.js
+      ┃ ┣ 📜atoms.js
+      ┃ ┣ 📜FontAwesome.jsx
+      ┃ ┣ 📜location.js
+      ┃ ┗ 📜util.js
+      ┣ 📜App.css
+      ┣ 📜App.js
+      ┣ 📜AppRouter.jsx
+      ┣ 📜index.css
+      ┣ 📜index.jsx
+      ┣ 📜reportWebVitals.js
+      ┗ 📜setupProxy.js
+  </div> </details>
 
 - <details> <summary>back</summary> <div markdown="1">
   📦src
@@ -763,14 +770,13 @@ UX/UI 설계, 뉴비페이지 컨텐츠 제작 및 TTS연결, 기상청 api 카�
    ┃ ┃ ┃ ┗ 📂net
    ┃ ┃ ┃ ┃ ┗ 📂fisher
    ┃ ┃ ┃ ┃ ┃ ┗ 📜FisherApplicationTests.java
-
-</div> </details>
+  </div> </details>
 
 # 8. 시스템 아키텍처
 
 ---
 
-![Untitled](<C:\Users\SSAFY\Desktop\공통PJT%20낚낚(NAKNAK)%20b518d613f1704404843ace5785d484d0\Untitled%209.png>)
+![](C:\Users\SSAFY\AppData\Roaming\marktext\images\2023-08-28-15-53-15-Untitled.png)
 
 # 9. 개발일지
 
